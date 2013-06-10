@@ -1,7 +1,20 @@
 <Alloy>
-	<Window class="container">
+<TabGroup>
+		<Tab id="tabLatest" title="Latest">
+			<Window class="container">
+		    	<SearchBar id="search" barColor="#000" showCancel="true" height="43" top="0" />
+	    	</Window>
+		</Tab>
+		<Tab id="tabPopular" title="Popular">
+			<Window class="container">
 
-	    <SearchBar id="search" barColor="#000" showCancel="true" height="43" top="0" />
+	    	</Window>
+		</Tab>
+		
+		<Tab id="tabFilters" title="My Filters">
+			<Window class="container">
 
-	</Window>
+	    	</Window>
+		</Tab>
+</TabGroup>
 </Alloy>

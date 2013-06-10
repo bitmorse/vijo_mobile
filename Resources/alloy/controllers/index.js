@@ -4,11 +4,13 @@ function Controller() {
     arguments[0] ? arguments[0]["$model"] : null;
     var $ = this;
     var exports = {};
-    $.__views.index = Ti.UI.createWindow({
-        backgroundColor: "white",
+    $.__views.index = Ti.UI.createTabGroup({
         id: "index"
     });
-    $.__views.index && $.addTopLevelView($.__views.index);
+    $.__views.__alloyId1 = Ti.UI.createWindow({
+        backgroundColor: "white",
+        id: "__alloyId1"
+    });
     $.__views.search = Ti.UI.createSearchBar({
         id: "search",
         barColor: "#000",
@@ -16,7 +18,34 @@ function Controller() {
         height: "43",
         top: "0"
     });
-    $.__views.index.add($.__views.search);
+    $.__views.__alloyId1.add($.__views.search);
+    $.__views.tabLatest = Ti.UI.createTab({
+        window: $.__views.__alloyId1,
+        id: "tabLatest",
+        title: "Latest"
+    });
+    $.__views.index.addTab($.__views.tabLatest);
+    $.__views.__alloyId2 = Ti.UI.createWindow({
+        backgroundColor: "white",
+        id: "__alloyId2"
+    });
+    $.__views.tabPopular = Ti.UI.createTab({
+        window: $.__views.__alloyId2,
+        id: "tabPopular",
+        title: "Popular"
+    });
+    $.__views.index.addTab($.__views.tabPopular);
+    $.__views.__alloyId3 = Ti.UI.createWindow({
+        backgroundColor: "white",
+        id: "__alloyId3"
+    });
+    $.__views.tabFilters = Ti.UI.createTab({
+        window: $.__views.__alloyId3,
+        id: "tabFilters",
+        title: "My Filters"
+    });
+    $.__views.index.addTab($.__views.tabFilters);
+    $.__views.index && $.addTopLevelView($.__views.index);
     exports.destroy = function() {};
     _.extend($, $.__views);
     var url = "http://vijo.inn.ac/api/publications.json";

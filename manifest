@@ -1,9 +1,9 @@
-#appname: vijo
-#appid: ac.inn.vijo
-#type: mobile
-#guid: cee263bf-1382-40d3-9117-6d0e2a5f58e4
-#version: 1.0
-#publisher: not specified
-#url: not specified
-#image: appicon.png
-#desc: not specified
+#appname:vijo
+#appid:ac.inn.vijo
+#type:mobile
+#guid:cee263bf-1382-40d3-9117-6d0e2a5f58e4
+#version:1.0
+#publisher:bitmorse
+#url:http://bitmorse.com
+#image:appicon.png
+#desc:vijo mobile
